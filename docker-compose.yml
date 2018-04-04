@@ -1,0 +1,86 @@
+version: '3'
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: ./docker/dev/mysql/Dockerfile
+    container_name: uberhack_mysql
+    env_file:
+      - ./docker/dev/mysql/.env
+    ports:
+      - 3306:3306
+    networks:
+      uberhack:
+        aliases:
+          - mysql
+  redis:
+    build:
+      context: .
+      dockerfile: ./docker/dev/redis/Dockerfile
+    container_name: uberhack_redis
+    env_file: 
+      - ./docker/dev/redis/.env
+    ports:
+      - 6379:6379
+    networks:
+      uberhack:
+        aliases:
+          - redis
+  # laravel_api:
+  #   build:
+  #     context: ./
+  #     dockerfile: ./docker/laravel-api/Dockerfile
+  #   container_name: buffet_laravel_api
+  #   working_dir: /var/www
+  #   ports:
+  #     - 8000:8000
+  #   volumes:
+  #     - ./buffet-php-api:/var/www
+  #     - /var/www/vendor
+  #   env_file:
+  #     - ./docker/laravel-api/laravel-api.env
+  #     - ./docker/aws.env
+  #   networks:
+  #     buffet:
+  #       aliases:
+  #         - laravel-api
+  node:
+    build:
+      context: .
+      dockerfile: ./docker/dev/api-node/Dockerfile
+    container_name: uberhack_api_node
+    volumes:
+      - "./uberhack-api-node:/app"
+      - "/app/node_modules"
+    ports:
+      - 3000:3000
+    env_file:
+      - ./docker/dev/api-node/.env
+      - ./docker/dev/mysql/.env
+      - ./docker/dev/redis/.env
+    networks:
+      uberhack:
+        aliases:
+          - api-node
+  # web_client:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/web-client/Dockerfile
+  #   container_name: buffet_web_client
+  #   volumes:
+  #     - "./buffet-web-client:/app"
+  #     - "/app/node_modules"
+  #   ports:
+  #     - 4200:4200
+  # web_site:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/web-site/Dockerfile
+  #   container_name: buffet_web_site
+  #   volumes:
+  #     - "./buffet-web-site:/app"
+  #     - "/app/node_modules"
+  #   ports:
+  #     - 4200:3000
+networks:
+  uberhack:
