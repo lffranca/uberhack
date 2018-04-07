@@ -1,0 +1,56 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ticket
+      MYSQL_DATABASE: ticket
+      MYSQL_USER: ticket
+      MYSQL_PASSWORD: ticket
+  redis:
+    image: redis:alpine
+    restart: always
+  es-master:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.0
+    environment:
+      - cluster.name=ticket
+      - bootstrap.memory_lock=true
+      - transport.host=localhost
+      - bootstrap.system_call_filter=false
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    mem_limit: 1g
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - es_master_data:/usr/share/elasticsearch/data
+  www:
+    depends_on:
+      - mysql
+      - es-master
+      - redis
+    restart: always
+    links:
+      - mysql
+      - es-master
+    image: iget/default-www
+    volumes:
+      - storage:/var/www/storage/
+
+volumes:
+  storage:
+    driver: local
+  mysql_data:
+    driver: local
+  es_master_data:
+    driver: local

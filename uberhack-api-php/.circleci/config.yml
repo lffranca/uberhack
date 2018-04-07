@@ -1,0 +1,47 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: iget/circleci-primary
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mysql:9.4
+
+    working_directory: ~/repository
+
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Start container
+          command: |
+            chmod +x run.sh
+            ./run.sh up --force-recreate
+            ./run.sh exec www ls /var/www
+      - run:
+          name: Install application
+          command: |
+            ./run.sh install
+
+      - run:
+          name: PHPCodeSniffing
+          command: |
+            ./run.sh phpcs
+
+      - run:
+          name: PHPUnit
+          command: |
+            ./run.sh phpunit
+
+      - run:
+          name: Destroy
+          when: always
+          command: |
+            ./run.sh down -v
