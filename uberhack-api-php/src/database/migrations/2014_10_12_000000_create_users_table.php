@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('cpf', 11);
+            $table->boolean('is_partner');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -86,6 +86,9 @@
       <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/src/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/src/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/src/vendor/barryvdh/laravel-ide-helper" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
