@@ -31,6 +31,7 @@ import { HistoryPage } from '../pages/history/history';
 import { DadosUsuarioPage } from '../pages/dados-usuario/dados-usuario';
 import { AlterarSenhaPage } from '../pages/alterar-senha/alterar-senha';
 import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
     ApiProvider,
     UserProvider,
     LoadingProvider,
+    SocialSharing,
   ]
 })
 export class AppModule {}
