@@ -13,12 +13,11 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\User::class, function (Faker $faker) {
+$factory->define(App\Models\Ride::class, function (Faker $faker, $attributes) {
+
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'cpf' => $faker->numerify('###########'),
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-        'remember_token' => str_random(10),
+        'modal_line_id' => $attributes['modal_line_id'] ?? factory(App\Models\ModalLine::class)->create()->id,
+        'ride_at' => $faker->dateTimeBetween('-1 week', 'now'),
+        'user_id' => $attributes['user_id'] ?? factory(\App\Models\User::class)->create()->id
     ];
 });
