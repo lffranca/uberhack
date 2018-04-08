@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
     selector: 'page-sucesso',
@@ -8,11 +9,40 @@ import { HomePage } from '../home/home';
 })
 export class SucessoPage {
     constructor(
-        private _navController: NavController
+        private _navController: NavController,
+        private _alertController: AlertController,
+        private _socialSharing: SocialSharing
     ) {}
 
     confirm() {
-        this._navController.setRoot(HomePage);
+        const alert = this._alertController.create({
+            title: 'Deseja compartilhar sua experiencia?',
+            message: 'Compartilhando sua experiencia existirá mais chances de sua reclamação ser reconhecida.',
+            buttons: [{
+                text: 'Não',
+                    handler: () => {
+                        this._navController.setRoot(HomePage);
+                    }
+                }, {
+                    text: 'Sim',
+                    handler: () => {
+                        this._shareFacebook();
+                    }
+                }
+            ]
+        });
+
+        alert.present();
+    }
+
+    private _shareFacebook() {
+        this._socialSharing.share('TESTE MESSAGE', 'TESTE SUBJECT')
+        .then(data => {
+            console.log('RESULT SHARE', data);
+
+            this._navController.setRoot(HomePage);
+        })
+        .catch(error => console.error(error));
     }
 
     back() {
