@@ -13,6 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+/** UserController */
+Route::post('user/register', ['as' => 'user.register', 'uses'=>'UserController@register']);
+Route::resource('user', 'UserController', ['only' => ['show']]);
+
+
+/*
+|--------------------------------------------------------------------------
+| Protected Routes
+|--------------------------------------------------------------------------
+ */
+
+Route::group(['middleware' => 'auth'], function () {
+    /** UserController */
+    Route::get('auth/user', ['as' => 'auth.user', 'uses' => 'AuthController@user']);
+    Route::resource('user', 'UserController', ['only' => ['update', 'destroy']]);
 });

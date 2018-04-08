@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+use App\Http\Requests\User\RegistrationRequest;
+use App\Http\Requests\User\UpdateRequest;
 use App\Models\User as UserModel;
 use App\Http\Resources\User as UserResource;
 use Auth;
@@ -28,6 +30,7 @@ class UserController extends Controller
     {
         return UserResource::make($user)->response();
     }
+
     /**
      * @param \App\Http\Requests\User\UpdateRequest $request
      * @param \App\Models\User                      $user
@@ -37,21 +40,22 @@ class UserController extends Controller
     public function update(UpdateRequest $request, UserModel $user)
     {
         if (Auth::user()->can('update', $user)) {
-            $user->update($request->only([
+            $user->fill($request->only([
                 'name',
-                'surname',
-                'password',
-                'address_street',
-                'address_number',
-                'address_zip',
-                'address_complement',
-                'address_city',
             ]));
+
+            if ($request->has('password')) {
+                $user->password = bcrypt($request->password);
+            }
+
+            $user->save();
+
             return UserResource::make($user)->response();
         } else {
             return response()->json('Unauthorized.', 401);
         }
     }
+
     /**
      * @param \App\Models\User $user
      *
