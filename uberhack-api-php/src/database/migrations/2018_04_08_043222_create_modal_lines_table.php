@@ -18,7 +18,6 @@ class CreateModalLinesTable extends Migration
             $table->unsignedInteger('modal_id');
             $table->foreign('modal_id')->references('id')->on('modals');
             $table->string('label');
-            $table->string('description');
             $table->timestamps();
         });
     }
