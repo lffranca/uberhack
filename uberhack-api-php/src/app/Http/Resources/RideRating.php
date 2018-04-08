@@ -2,9 +2,7 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class Modal extends BaseResource
+class RideRating extends BaseResource
 {
     /**
      * Transform the resource into an array.
@@ -16,11 +14,14 @@ class Modal extends BaseResource
     {
         $this->appendRawAttributes([
             'id',
-            'label',
+            'ride_id',
+            'modal_problem_id',
+            'overall_rating',
+            'observations',
         ]);
 
-        $this->includeRelation('modal_line', ModalLine::class);
-        $this->includeRelation('modal_problems', ModalProblem::class);
+        $this->includeRelation('ride', Ride::class);
+        $this->includeRelation('modal_problem', ModalProblem::class);
 
         return $this->data;
     }

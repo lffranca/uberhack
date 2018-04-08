@@ -31,4 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('auth/user', ['as' => 'auth.user', 'uses' => 'AuthController@user']);
     Route::resource('user', 'UserController', ['only' => ['update', 'destroy']]);
 
+    /** RideRatingController */
+    Route::post('ride/rating', ['as' => 'ride_rating.store', 'uses' => 'RideRatingController@store']);
+
 });

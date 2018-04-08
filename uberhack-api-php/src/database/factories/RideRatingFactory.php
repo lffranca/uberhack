@@ -17,6 +17,8 @@ $factory->define(App\Models\RideRating::class, function (Faker $faker, $attribut
 
     return [
         'ride_id' => $attributes['ride_id'] ?? factory(App\Models\Ride::class)->create()->id,
+        'modal_problem_id' => $attributes['modal_problem_id'] ?? factory(App\Models\ModalProblem::class)->create()->id,
         'overall_rating' => $faker->numberBetween(1, 5),
+        'observations' => $faker->paragraph,
     ];
 });

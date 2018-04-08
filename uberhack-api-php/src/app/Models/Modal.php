@@ -13,6 +13,7 @@ class Modal extends Model
     {
         return $this->hasMany(ModalLine::class);
     }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

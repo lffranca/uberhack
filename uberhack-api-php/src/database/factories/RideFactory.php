@@ -17,7 +17,6 @@ $factory->define(App\Models\Ride::class, function (Faker $faker, $attributes) {
 
     return [
         'modal_line_id' => $attributes['modal_line_id'] ?? factory(App\Models\ModalLine::class)->create()->id,
-        'label' => $faker->words(mt_rand(1,3), true),
-        'description' => $faker->paragraph,
+        'ride_at' => $faker->dateTimeBetween('-1 week', 'now')
     ];
 });

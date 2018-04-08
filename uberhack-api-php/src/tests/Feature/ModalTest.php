@@ -4,14 +4,9 @@ namespace Tests\Feature;
 
 use App\Http\Resources\Modal as ModalResource;
 use App\Models\Modal;
-use App\Http\Resources\User as UserResource;
 use App\Models\ModalLine;
 use App\Models\ModalProblem;
-use App\Models\ModalTicketCategory;
-use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Tests\TestCase;
 use Tests\Traits\ChecksApiResponse;
 
