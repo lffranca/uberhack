@@ -206,7 +206,7 @@ function command_install {
     command_composer install --prefer-dist
     command_artisan key:generate
     command_migrate
-#    command_artisan elastic:setup
+    command_artisan elastic:setup
     command_artisan passport:install
     command_artisan passport:keys
 }

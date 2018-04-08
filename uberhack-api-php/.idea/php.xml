@@ -90,6 +90,12 @@
       <path value="$PROJECT_DIR$/src/vendor/barryvdh/reflection-docblock" />
       <path value="$PROJECT_DIR$/src/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/src/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/src/vendor/laravel/scout" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/streams" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/ringphp" />
+      <path value="$PROJECT_DIR$/src/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/src/vendor/babenkoivan/scout-elasticsearch-driver" />
+      <path value="$PROJECT_DIR$/src/vendor/elasticsearch/elasticsearch" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

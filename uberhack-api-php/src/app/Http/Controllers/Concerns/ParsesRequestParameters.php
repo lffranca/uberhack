@@ -22,11 +22,13 @@ trait ParsesRequestParameters
 
 
     /**
+     * @param null $default
+     *
      * @return array
      */
-    protected function parsePageSize()
+    protected function parsePageSize($default = null)
     {
-        return min(Request::get('page_size', config('api.response.default_page_size')), 50);
+        return min(Request::get('page_size', $default ?? config('api.response.default_page_size')), 50);
     }
 
     /**

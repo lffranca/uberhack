@@ -22,7 +22,7 @@ trait SearchOnModel
             ->with($this->parseIncludes())
             ->orderBy(...$this->parseSort('-_score', $this->getSearchSortAliases()));
 
-        $pageSize = $this->parsePageSize();
+        $pageSize = $this->parsePageSize(10);
 
         if ($pageSize === 'all') {
             $collection = $query->get();
@@ -32,10 +32,6 @@ trait SearchOnModel
 
         $collection->load($this->parseIncludes());
 
-        return $this->resource::collection($collection)->additional([
-            'meta' => [
-                'model' => $this->model
-            ]
-        ])->response();
+        return $this->resource::collection($collection)->response();
     }
 }
