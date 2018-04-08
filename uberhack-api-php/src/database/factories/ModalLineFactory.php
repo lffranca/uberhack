@@ -13,12 +13,11 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\User::class, function (Faker $faker) {
+$factory->define(App\Models\ModalLine::class, function (Faker $faker, $attributes) {
+
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'cpf' => $faker->numerify('###########'),
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-        'remember_token' => str_random(10),
+        'modal_id' => $attributes['modal_id'] ?? factory(App\Models\Modal::class)->create()->id,
+        'label' => $faker->words(mt_rand(1,3), true),
+        'description' => $faker->sentence,
     ];
 });

@@ -73,6 +73,29 @@
       <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/src/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/src/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/src/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/src/vendor/league/event" />
+      <path value="$PROJECT_DIR$/src/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/src/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/src/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/src/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/src/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/src/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/src/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/src/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/src/vendor/laravel/scout" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/streams" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/ringphp" />
+      <path value="$PROJECT_DIR$/src/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/src/vendor/babenkoivan/scout-elasticsearch-driver" />
+      <path value="$PROJECT_DIR$/src/vendor/elasticsearch/elasticsearch" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

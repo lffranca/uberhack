@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e71d8942-76aa-469b-80fe-4823567db919" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uberhack.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/.buckconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/.flowconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/BUCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/java/com/uberhack/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/java/com/uberhack/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/keystores/BUCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/keystores/debug.keystore.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack-tvOS/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack-tvOSTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack.xcodeproj/xcshareddata/xcschemes/Uberhack-tvOS.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack.xcodeproj/xcshareddata/xcschemes/Uberhack.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/Base.lproj/LaunchScreen.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/Images.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/Uberhack/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/UberhackTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/ios/UberhackTests/UberhackTests.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/src/reducers/AppReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Uberhack/src/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/config/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/migrations/20180404193833-create-user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/models/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/models/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-node/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uberhack-api-php/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/uberhack-api-php/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="625" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="uberhack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uberhack" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e71d8942-76aa-469b-80fe-4823567db919" name="Default" comment="" />
+      <created>1523188242943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523188242943</updated>
+      <workItem from="1523188244406" duration="72000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="72000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="625" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SvgViewer" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2486631" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
