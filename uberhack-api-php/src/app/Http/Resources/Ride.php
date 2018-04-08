@@ -21,7 +21,8 @@ class Ride extends BaseResource
             'ride_at'
         ]);
 
-        $this->includeRelation('modal_line', ModalLines::class);
+        $this->includeRelation('user', User::class);
+        $this->includeRelation('modal_line', ModalLine::class);
 
         return $this->data;
     }

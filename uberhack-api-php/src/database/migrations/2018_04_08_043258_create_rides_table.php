@@ -15,6 +15,10 @@ class CreateRidesTable extends Migration
     {
         Schema::create('rides', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->unsignedInteger('modal_line_id');
             $table->foreign('modal_line_id')->references('id')->on('modal_lines');
 

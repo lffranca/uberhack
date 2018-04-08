@@ -35,4 +35,12 @@ class User extends Authenticatable
      */
     protected $casts = [
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rides()
+    {
+        return $this->hasMany(Ride::class);
+    }
 }

@@ -17,11 +17,17 @@ class User extends BaseResource
             'name',
         ]);
 
+        /*
+         * Email, CPF fields and rides relationship should
+         * only be shown to the user.
+         */
         if (\Auth::id() === $this->resource->id) {
             $this->appendRawAttributes([
                 'email',
                 'cpf'
             ]);
+            
+            $this->includeRelation('rides', Ride::class);
         }
 
         return $this->data;
