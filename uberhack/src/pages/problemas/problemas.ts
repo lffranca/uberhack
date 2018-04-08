@@ -2,31 +2,34 @@ import {Component} from '@angular/core';
 import { NavParams, NavController, ModalController } from 'ionic-angular';
 import {SearchBusPage} from '../search-bus/search-bus';
 import { ConfirmPage } from '../confirm/confirm';
-import { SearchAppPage } from '../search-app/search-app';
+import {Modal} from "../../models/modal";
 
 @Component({
     selector: 'page-problemas',
     templateUrl: 'problemas.html'
 })
 export class ProblemasPage {
-    public item = {};
+    public modal: Modal;
     public title: 'Ônibus' | 'Taxi' | 'Applicativos';
     public bus;
     public app;
     public rate = 0;
-    public date = new Date;
-    public observacoes = '';
     public appMotorista = '';
     public appPlacaVeiculo = '';
     public taxiNumero = '';
+
+
+    public ride_at = new Date;
+    public observations = '';
+    public modal_problem_id: number;
 
     constructor(
         private _navParams: NavParams,
         private _navController: NavController,
         private _modalController: ModalController
     ) {
-        const item = this._navParams.get('item');
-        switch (item.id) {
+        const modal = this._navParams.get('modal');
+        switch (modal.id) {
             case 1:
                 this.title = 'Ônibus';
                 break;
@@ -38,31 +41,21 @@ export class ProblemasPage {
                 break;
         }
 
-        this.item = item;
+        this.modal = modal;
+
+        console.log('modal recebido é ', modal);
     }
 
     onRatingChange(event) {
         console.log(event);
     }
 
-    searchLinhas() {
-        const modal = this._modalController.create(SearchBusPage);
+    search() {
+        const modal = this._modalController.create(SearchBusPage, {'modal_id': this.modal.id});
 
         modal.onDidDismiss((data) => {
             if (data) {
                 this.bus = data;
-            }
-        });
-
-        modal.present();
-    }
-
-    searchApp() {
-        const modal = this._modalController.create(SearchAppPage);
-
-        modal.onDidDismiss((data) => {
-            if (data) {
-                this.app = data;
             }
         });
 

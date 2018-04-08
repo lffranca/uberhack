@@ -27,11 +27,11 @@
     </div>
   </div>
   <div class="all-items">
-    <div *ngFor="let item of items" (click)="goItem(item)" class="options-item">
-      <div class="text-content">{{ item.description }}</div>
+    <div *ngFor="let modal of modals" (click)="goItem(modal)" class="options-item">
+      <div class="text-content">{{ modal.label }}</div>
       
       <div class="icon-content">
-        <ion-icon [name]="item.icon"></ion-icon>
+        <ion-icon [name]="modal.icon"></ion-icon>
       </div>
     </div>
   </div>

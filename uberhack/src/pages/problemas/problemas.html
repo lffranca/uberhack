@@ -19,27 +19,24 @@
         </rating>
     </div>
 
-    <button *ngIf="item.id === 1" (click)="searchLinhas()" ion-button block>
-        Adicionar linha de ônibus
+    <button *ngIf="modal.id === 1" (click)="search()" ion-button block>
+        Escolher linha de ônibus
     </button>
 
-    <button *ngIf="item.id === 3" (click)="searchApp()" ion-button block>
-        Adicionar aplicativo
+    <button *ngIf="modal.id === 3" (click)="search()" ion-button block>
+        Escolher aplicativo
     </button>
-    <!-- <div *ngIf="item.id === 1 && bus">
+    <!-- <div *ngIf="modal.id === 1 && bus">
         <span><b>Linha Selecionada: </b> {{ bus.number }} - {{ bus.description }}</span>
     </div> -->
 
-    <ion-card style="margin-left: 0; margin-right: 0; width: 100%;" *ngIf="item.id === 1 && bus">
-        <ion-card-header>
-            <b>COD: </b> {{ bus.number }}
-        </ion-card-header>
+    <ion-card style="margin-left: 0; margin-right: 0; width: 100%;" *ngIf="modal.id === 1 && bus">
         <ion-card-content>
-            {{ bus.description }}
+            {{ bus.label }}
         </ion-card-content>
     </ion-card>
 
-    <ion-card style="margin-left: 0; margin-right: 0; width: 100%;" *ngIf="item.id === 3 && app">
+    <ion-card style="margin-left: 0; margin-right: 0; width: 100%;" *ngIf="modal.id === 3 && app">
         <ion-card-content>
             <b>{{ app.description }}</b>
 
@@ -56,7 +53,7 @@
         </ion-card-content>
     </ion-card>
 
-    <div style="margin-top: 10px;" *ngIf="item.id === 2">
+    <div style="margin-top: 10px;" *ngIf="modal.id === 2">
         <!-- <p>
             Número do Taxi
         </p> -->
@@ -66,49 +63,41 @@
         </ion-item>
     </div>
 
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 30px;" *ngIf="rate !== 5">
         <p>
             Informe data e horario da ocorrência:
         </p>
         <ion-item>
             <ion-label>Data</ion-label>
-            <ion-datetime cancelText="Cancelar" doneText="Ok" displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
+            <ion-datetime cancelText="Cancelar" doneText="Ok" displayFormat="DD/MM/YYYY" [(ngModel)]="ride_at"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Hora</ion-label>
-            <ion-datetime cancelText="Cancelar" doneText="Ok" displayFormat="HH:mm" [(ngModel)]="date"></ion-datetime>
+            <ion-datetime cancelText="Cancelar" doneText="Ok" displayFormat="HH:mm" [(ngModel)]="ride_at"></ion-datetime>
         </ion-item>
     </div>
 
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 30px;" radio-group [(ngModel)]="modal_problem_id" *ngIf="rate !== 5">
         <p>
             Tipo de Problema:
         </p>
-        <ion-item>
-            <ion-label>Atraso</ion-label>
-            <ion-checkbox></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Segurança</ion-label>
-            <ion-checkbox></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Atendimento</ion-label>
-            <ion-checkbox></ion-checkbox>
+        <ion-item *ngFor="let modalProblem of modal?.modal_problems">
+            <ion-label>{{ modalProblem.label }}</ion-label>
+            <ion-radio [value]="modalProblem.id"></ion-radio>
         </ion-item>
     </div>
 
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 30px;" *ngIf="rate !== 5">
         <p>
             Escreva suas observações:
         </p>
         <ion-item>
-            <ion-textarea placeholder="Digite aqui..." [(ngModel)]="observacoes"></ion-textarea>
+            <ion-textarea placeholder="Digite aqui..." [(ngModel)]="observations"></ion-textarea>
         </ion-item>
     </div>
 
     <div style="margin-top: 30px; margin-bottom: 20px;">
-        <button (click)="goConfirm()" color="secondary" ion-button block>
+        <button (click)="goConfirm()" color="secondary" ion-button block [disabled]="!rate || !bus">
             Continuar
         </button>
     </div>

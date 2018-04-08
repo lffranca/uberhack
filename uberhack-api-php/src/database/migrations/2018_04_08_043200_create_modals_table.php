@@ -16,6 +16,7 @@ class CreateModalsTable extends Migration
         Schema::create('modals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
+            $table->string('icon');
             $table->timestamps();
         });
     }

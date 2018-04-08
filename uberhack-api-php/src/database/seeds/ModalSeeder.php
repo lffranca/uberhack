@@ -16,30 +16,26 @@ class ModalSeeder extends Seeder
 
         $modal = Modal::create([
             'label' => 'Ônibus',
+            'icon' => 'bus'
         ]);
 
-        foreach ($lineLabels as $lineLabel) {
-            \App\Models\ModalLine::create([
+        $modalProblems = [
+            'Atraso',
+            'Segurança',
+            'Atendimento',
+        ];
+
+        foreach ($modalProblems as $modalProblem) {
+            \App\Models\ModalProblem::create([
                 'modal_id' => $modal->id,
-                'label' => $lineLabel
+                'label' => $modalProblem,
             ]);
         }
 
-        $lineLabels = [
-            "Uber",
-            "99 Taxi",
-            "99 Pop",
-            "Cabify",
-        ];
-
-        $modal = Modal::create([
-            'label' => 'Aplicativos',
-        ]);
-
         foreach ($lineLabels as $lineLabel) {
             \App\Models\ModalLine::create([
                 'modal_id' => $modal->id,
-                'label' => $lineLabel
+                'label' => $lineLabel,
             ]);
         }
 
@@ -57,7 +53,53 @@ class ModalSeeder extends Seeder
 
         $modal = Modal::create([
             'label' => 'Taxi',
+            'icon' => 'car'
         ]);
+
+        $modalProblems = [
+            'Atraso',
+            'Segurança',
+            'Atendimento',
+        ];
+
+        foreach ($modalProblems as $modalProblem) {
+            \App\Models\ModalProblem::create([
+                'modal_id' => $modal->id,
+                'label' => $modalProblem,
+            ]);
+        }
+
+        foreach ($lineLabels as $lineLabel) {
+            \App\Models\ModalLine::create([
+                'modal_id' => $modal->id,
+                'label' => $lineLabel
+            ]);
+        }
+
+        $lineLabels = [
+            "Uber",
+            "99 Taxi",
+            "99 Pop",
+            "Cabify",
+        ];
+
+        $modal = Modal::create([
+            'label' => 'App',
+            'icon' => 'car'
+        ]);
+
+        $modalProblems = [
+            'Atraso',
+            'Segurança',
+            'Atendimento',
+        ];
+
+        foreach ($modalProblems as $modalProblem) {
+            \App\Models\ModalProblem::create([
+                'modal_id' => $modal->id,
+                'label' => $modalProblem,
+            ]);
+        }
 
         foreach ($lineLabels as $lineLabel) {
             \App\Models\ModalLine::create([

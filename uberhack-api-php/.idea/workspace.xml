@@ -14,24 +14,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="-20">
+              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoreRequest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Http/Requests/RideRating/StoreRequest.php">
+      <file leaf-file-name="ModalLineController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/ModalLineController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchOnModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Concerns/SearchOnModel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="810">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="26" />
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="29" />
-              <caret line="27" column="27" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="27" />
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="20" />
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="25" />
+              <caret line="35" column="5" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -87,8 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/Concerns/PaginatesQuery.php" />
-        <option value="$PROJECT_DIR$/src/database/factories/ModalProblemFactory.php" />
         <option value="$PROJECT_DIR$/src/app/Models/ModalProblem.php" />
         <option value="$PROJECT_DIR$/src/database/migrations/2018_04_08_043201_create_modal_problems_table.php" />
         <option value="$PROJECT_DIR$/src/tests/Feature/RideRateTest.php" />
@@ -119,25 +122,27 @@
         <option value="$PROJECT_DIR$/src/app/Console/Commands/ElasticSetup.php" />
         <option value="$PROJECT_DIR$/src/app/Elasticsearch/Configurators/ModalLineIndexConfigurator.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Concerns/ParsesRequestParameters.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Controllers/ModalLineController.php" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/src/app/Models/ModalLine.php" />
         <option value="$PROJECT_DIR$/src/config/scout.php" />
         <option value="$PROJECT_DIR$/src/phpunit.xml" />
-        <option value="$PROJECT_DIR$/src/routes/api.php" />
         <option value="$PROJECT_DIR$/src/tests/Feature/ModalLineTest.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Controllers/Concerns/SearchOnModel.php" />
         <option value="$PROJECT_DIR$/src/database/migrations/2018_04_08_043222_create_modal_lines_table.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Resources/ModalLine.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/OnibusFortalezaSeeder.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/UberLikeSeeder.php" />
-        <option value="$PROJECT_DIR$/src/database/seeds/ModalSeeder.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/src/app/Providers/AuthServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/src/config/auth.php" />
-        <option value="$PROJECT_DIR$/src/app/Http/Resources/Modal.php" />
         <option value="$PROJECT_DIR$/src/app/Http/Resources/Ride.php" />
+        <option value="$PROJECT_DIR$/src/database/migrations/2018_04_08_043200_create_modals_table.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Resources/Modal.php" />
+        <option value="$PROJECT_DIR$/src/database/factories/ModalFactory.php" />
+        <option value="$PROJECT_DIR$/src/database/seeds/ModalSeeder.php" />
+        <option value="$PROJECT_DIR$/src/routes/api.php" />
+        <option value="$PROJECT_DIR$/src/app/Http/Controllers/ModalLineController.php" />
       </list>
     </option>
   </component>
@@ -251,9 +256,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="625" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="y" value="1107" />
+    <option name="width" value="1366" />
+    <option name="height" value="676" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -292,16 +297,7 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Requests" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="uberhack-api-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uberhack-api-php" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Requests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="RideRating" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="uberhack-api-php" type="b2602c69:ProjectViewProjectNode" />
@@ -322,13 +318,14 @@
               <item name="uberhack-api-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="uberhack-api-php" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="uberhack-api-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="uberhack-api-php" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="factories" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="uberhack-api-php" type="b2602c69:ProjectViewProjectNode" />
@@ -351,7 +348,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="rideratingcont&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/RideRatingController.php&#10;api&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/routes/api.php&#10;run.sh&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/run.sh&#10;riderat&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/RideRatingController.php&#10;rideratingte&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/tests/Feature/RideRatingTest.php&#10;usercont&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/UserController.php&#10;api.php&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/vendor/symfony/process/Pipes/AbstractPipes.php&#10;composer.json&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/composer.json&#10;auth.php&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/config/auth.php" />
+    <property name="SearchEverywhereHistoryKey" value="api.php&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/routes/api.php&#10;ridecontroller&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/RideController.php&#10;rideratingcont&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/RideRatingController.php&#10;api&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/routes/api.php&#10;run.sh&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/run.sh&#10;riderat&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/RideRatingController.php&#10;rideratingte&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/tests/Feature/RideRatingTest.php&#10;usercont&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/app/Http/Controllers/UserController.php&#10;composer.json&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/composer.json&#10;auth.php&#9;FILE&#9;file:///var/Sandbox/uberhack/uberhack-api-php/src/config/auth.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -396,15 +393,15 @@
       <workItem from="1523160682075" duration="19900000" />
       <workItem from="1523188654732" duration="4301000" />
       <workItem from="1523194696115" duration="1341000" />
-      <workItem from="1523196317440" duration="311000" />
+      <workItem from="1523196317440" duration="4734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33116000" />
+    <option name="totallyTimeSpent" value="37539000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="625" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="1107" width="1366" height="676" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -414,7 +411,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19144385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25911853" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -436,20 +433,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Resources/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/factories/RideFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/migrations/2018_04_08_043259_create_ride_ratings_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -520,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/RideController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env.docker">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="776">
@@ -559,13 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Concerns/ParsesRequestParameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -618,20 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Concerns/SearchOnModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/ModalLineController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/Feature/ModalLineTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -668,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
@@ -700,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="264" column="16" selection-start-line="264" selection-start-column="12" selection-end-line="264" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/seeds/ModalSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -750,20 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Http/Resources/Modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Models/Modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/RideRatingController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-35">
@@ -771,9 +698,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/RideController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Http/Requests/RideRating/StoreRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
+        <state relative-caret-position="243">
           <caret line="26" column="26" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="26" />
           <caret line="28" column="29" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="29" />
           <caret line="27" column="27" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="27" />
@@ -782,10 +716,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Models/Modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Resources/Modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/factories/ModalFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/migrations/2018_04_08_043200_create_modals_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Concerns/ParsesRequestParameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/seeds/ModalSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="-20">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/Concerns/SearchOnModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Http/Controllers/ModalLineController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
         </state>
       </provider>
     </entry>

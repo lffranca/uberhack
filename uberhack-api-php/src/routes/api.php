@@ -20,7 +20,7 @@ Route::resource('user', 'UserController', ['only' => ['show']]);
 /** ModalController */
 Route::resource('modal', 'ModalController', ['only' => ['index', 'show']]);
 
-Route::get('modal_line/search/{query}', [
+Route::get('modal_line/search/{modal_id}/{query}', [
     'as' => 'modal_line.search',
     'uses' => 'ModalLineController@search'
 ]);

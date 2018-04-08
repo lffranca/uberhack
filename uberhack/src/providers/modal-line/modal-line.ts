@@ -19,11 +19,12 @@ export class ModalLineProvider extends ApiProvider {
      * @returns {Observable<Array<ModalLine>>}
      */
     public search(
+        modal_id: any,
         query: string,
         include: Array<String> = [],
         filters: any = [],
     ): Observable<any> {
-        let url = new URL(`${this.config.API.ENDPOINT}/city/search/${encodeURIComponent(query)}`);
+        let url = new URL(`${this.config.API.ENDPOINT}/modal_line/search/${modal_id}/${encodeURIComponent(query)}`);
 
         if (include.length) {
             url.searchParams.set('include', include.join(','));

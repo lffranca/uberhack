@@ -16,6 +16,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Modal::class, function (Faker $faker, $attributes) {
 
     return [
-        'label' => $faker->words(mt_rand(1,3), true)
+        'label' => $faker->words(mt_rand(1,3), true),
+        'icon' => 'car',
     ];
 });

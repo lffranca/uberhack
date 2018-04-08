@@ -24,7 +24,7 @@ export class ModalProvider extends ApiProvider {
      */
     public list(include: Array<String> = [], filters: any = [], pageSize: number = null): Observable<Collection<Modal>> {
 
-        let url = new URL(`${this.config.API.ENDPOINT}/event`);
+        let url = new URL(`${this.config.API.ENDPOINT}/modal`);
 
         if (include.length) {
             url.searchParams.set('include', include.join(','));

@@ -26,11 +26,14 @@ import {ApiProvider} from "../providers/api/api";
 import {UserProvider} from "../providers/user/user";
 import {LoadingProvider} from "../providers/loading/loading";
 import {IonicStorageModule} from "@ionic/storage";
-import { SearchAppPage } from '../pages/search-app/search-app';
 import { HistoryPage } from '../pages/history/history';
 import { DadosUsuarioPage } from '../pages/dados-usuario/dados-usuario';
 import { AlterarSenhaPage } from '../pages/alterar-senha/alterar-senha';
 import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
+import {ModalProvider} from "../providers/modal/modal";
+import {ModalLineProvider} from "../providers/modal-line/modal-line";
+import {RideProvider} from "../providers/ride/ride";
+import {RideRatingProvider} from '../providers/ride-rating/ride-rating';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,6 @@ import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
     SearchBusPage,
     ConfirmPage,
     SucessoPage,
-    SearchAppPage,
     HistoryPage,
     DadosUsuarioPage,
     AlterarSenhaPage,
@@ -75,7 +77,6 @@ import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
     SearchBusPage,
     ConfirmPage,
     SucessoPage,
-    SearchAppPage,
     HistoryPage,
     DadosUsuarioPage,
     AlterarSenhaPage,
@@ -95,6 +96,10 @@ import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
     ApiProvider,
     UserProvider,
     LoadingProvider,
+    ModalProvider,
+    ModalLineProvider,
+    RideProvider,
+    RideRatingProvider,
   ]
 })
 export class AppModule {}

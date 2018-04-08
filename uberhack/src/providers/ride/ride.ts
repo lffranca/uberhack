@@ -5,6 +5,8 @@ import "rxjs/add/operator/switchMap";
 import {Observable} from "rxjs/Observable";
 import {Modal} from "../../models/modal";
 import {Ride} from "../../models/ride";
+import {RideResponse} from '../ride/ride-response';
+import {RideRatingResponse} from '../ride-rating/ride-rating-response';
 
 @Injectable()
 export class RideProvider extends ApiProvider {

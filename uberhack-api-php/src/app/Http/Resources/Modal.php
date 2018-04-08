@@ -17,6 +17,7 @@ class Modal extends BaseResource
         $this->appendRawAttributes([
             'id',
             'label',
+            'icon',
         ]);
 
         $this->includeRelation('modal_lines', ModalLine::class);
