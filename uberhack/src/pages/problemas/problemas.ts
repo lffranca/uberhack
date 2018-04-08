@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import { NavParams, NavController, ModalController } from 'ionic-angular';
 import {SearchBusPage} from '../search-bus/search-bus';
 import { ConfirmPage } from '../confirm/confirm';
+import { SearchAppPage } from '../search-app/search-app';
 
 @Component({
     selector: 'page-problemas',
@@ -11,9 +12,13 @@ export class ProblemasPage {
     public item = {};
     public title: 'Ônibus' | 'Taxi' | 'Applicativos';
     public bus;
+    public app;
     public rate = 0;
     public date = new Date;
     public observacoes = '';
+    public appMotorista = '';
+    public appPlacaVeiculo = '';
+    public taxiNumero = '';
 
     constructor(
         private _navParams: NavParams,
@@ -46,6 +51,18 @@ export class ProblemasPage {
         modal.onDidDismiss((data) => {
             if (data) {
                 this.bus = data;
+            }
+        });
+
+        modal.present();
+    }
+
+    searchApp() {
+        const modal = this._modalController.create(SearchAppPage);
+
+        modal.onDidDismiss((data) => {
+            if (data) {
+                this.app = data;
             }
         });
 

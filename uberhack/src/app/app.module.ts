@@ -17,6 +17,7 @@ import { SearchBusPage } from '../pages/search-bus/search-bus';
 import { Ionic2RatingModule } from "ionic2-rating";
 import { ConfirmPage } from '../pages/confirm/confirm';
 import { SucessoPage } from '../pages/sucesso/sucesso';
+import { SearchAppPage } from '../pages/search-app/search-app';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SucessoPage } from '../pages/sucesso/sucesso';
     SearchBusPage,
     ConfirmPage,
     SucessoPage,
+    SearchAppPage,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { SucessoPage } from '../pages/sucesso/sucesso';
     SearchBusPage,
     ConfirmPage,
     SucessoPage,
+    SearchAppPage,
   ],
   providers: [
     StatusBar,

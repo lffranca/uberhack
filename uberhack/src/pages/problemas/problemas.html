@@ -22,6 +22,10 @@
     <button *ngIf="item.id === 1" (click)="searchLinhas()" ion-button block>
         Adicionar linha de ônibus
     </button>
+
+    <button *ngIf="item.id === 3" (click)="searchApp()" ion-button block>
+        Adicionar aplicativo
+    </button>
     <!-- <div *ngIf="item.id === 1 && bus">
         <span><b>Linha Selecionada: </b> {{ bus.number }} - {{ bus.description }}</span>
     </div> -->
@@ -34,6 +38,33 @@
             {{ bus.description }}
         </ion-card-content>
     </ion-card>
+
+    <ion-card style="margin-left: 0; margin-right: 0; width: 100%;" *ngIf="item.id === 3 && app">
+        <ion-card-content>
+            <b>{{ app.description }}</b>
+
+            <ion-list>
+                <ion-item>
+                    <ion-label floating>Nome do Motorista</ion-label>
+                    <ion-input type="text" [(ngModel)]="appMotorista"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Placa do Veículo</ion-label>
+                    <ion-input type="text" [(ngModel)]="appPlacaVeiculo"></ion-input>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+    <div style="margin-top: 10px;" *ngIf="item.id === 2">
+        <!-- <p>
+            Número do Taxi
+        </p> -->
+        <ion-item>
+            <ion-label floating>Número do Taxi</ion-label>
+            <ion-input type="text" [(ngModel)]="taxiNumero"></ion-input>
+        </ion-item>
+    </div>
 
     <div style="margin-top: 30px;">
         <p>
