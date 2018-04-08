@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class User extends JsonResource
+class ModalLines extends BaseResource
 {
     /**
      * Transform the resource into an array.
@@ -14,8 +14,12 @@ class User extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-            'id' => $this->resource->id,
-        ];
+        $this->appendRawAttributes([
+            'id',
+            'label',
+            'description'
+        ]);
+
+        return $this->data;
     }
 }

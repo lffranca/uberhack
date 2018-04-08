@@ -17,6 +17,8 @@ use Illuminate\Http\Request;
 Route::post('user/register', ['as' => 'user.register', 'uses'=>'UserController@register']);
 Route::resource('user', 'UserController', ['only' => ['show']]);
 
+/** ModalController */
+Route::resource('modal', 'ModalController', ['only' => ['index', 'show']]);
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +30,5 @@ Route::group(['middleware' => 'auth'], function () {
     /** UserController */
     Route::get('auth/user', ['as' => 'auth.user', 'uses' => 'AuthController@user']);
     Route::resource('user', 'UserController', ['only' => ['update', 'destroy']]);
+
 });

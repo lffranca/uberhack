@@ -13,11 +13,11 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\Ride::class, function (Faker $faker, $attributes) {
+$factory->define(App\Models\ModalLine::class, function (Faker $faker, $attributes) {
 
     return [
-        'modal_line_id' => $attributes['modal_line_id'] ?? factory(App\Models\ModalLine::class)->create()->id,
+        'modal_id' => $attributes['modal_id'] ?? factory(App\Models\Modal::class)->create()->id,
         'label' => $faker->words(mt_rand(1,3), true),
-        'description' => $faker->paragraph,
+        'description' => $faker->sentence,
     ];
 });

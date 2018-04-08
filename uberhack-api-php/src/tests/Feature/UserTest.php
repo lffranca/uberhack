@@ -67,7 +67,7 @@ class UserTest extends TestCase
         $this->actingAs($user);
 
         $response = $this->patchJson("/api/user/{$user->id}", $newData->toArray());
-        
+
         $response->assertStatus(200);
         $response->assertJsonStructure(["data" => $this->privateStructure]);
 
