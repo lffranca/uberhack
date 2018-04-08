@@ -19,7 +19,7 @@ class Modal extends BaseResource
             'label',
         ]);
 
-        $this->includeRelation('modal_line', ModalLine::class);
+        $this->includeRelation('modal_lines', ModalLine::class);
         $this->includeRelation('modal_problems', ModalProblem::class);
 
         return $this->data;
