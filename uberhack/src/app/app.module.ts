@@ -90,6 +90,7 @@ import {RideRatingProvider} from '../providers/ride-rating/ride-rating';
     {provide: APP_CONFIG, useValue: APP_CONFIG_VALUE},
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     CounterActions,
+    SocialSharing,
 
     // API Providers
 
@@ -97,6 +98,10 @@ import {RideRatingProvider} from '../providers/ride-rating/ride-rating';
     ApiProvider,
     UserProvider,
     LoadingProvider,
+    ModalProvider,
+    ModalLineProvider,
+    RideProvider,
+    RideRatingProvider,
   ]
 })
 export class AppModule {}
