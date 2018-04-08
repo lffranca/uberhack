@@ -33,12 +33,16 @@ export class LoginPage {
     }
 
     ionViewWillEnter() {
+        console.log('will enter');
         this.userSubscription = this.authProvider.observeUser().subscribe((user: User) => {
             if (user) {
+                console.log('está autenticado');
                 if (this._navController.canGoBack()) {
                     this._navController.pop();
+                    console.log('fazendo pop');
                 } else {
                     this._navController.setRoot(HomePage);
+                    console.log('indo para home');
                 }
             }
         })
