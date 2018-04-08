@@ -1,0 +1,32 @@
+page-dados-usuario {
+    ion-content {
+        .menu-header {
+            // background-color: map-get($colors, primary);
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        
+            .header-avatar {
+                height: 10em;
+                width: 10em;
+                border-radius: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .header-info {
+                color: white;
+                
+                .header-menu-nome {
+                    font-size: 1.5em;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}

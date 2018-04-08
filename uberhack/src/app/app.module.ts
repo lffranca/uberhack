@@ -27,6 +27,10 @@ import {UserProvider} from "../providers/user/user";
 import {LoadingProvider} from "../providers/loading/loading";
 import {IonicStorageModule} from "@ionic/storage";
 import { SearchAppPage } from '../pages/search-app/search-app';
+import { HistoryPage } from '../pages/history/history';
+import { DadosUsuarioPage } from '../pages/dados-usuario/dados-usuario';
+import { AlterarSenhaPage } from '../pages/alterar-senha/alterar-senha';
+import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { SearchAppPage } from '../pages/search-app/search-app';
     ConfirmPage,
     SucessoPage,
     SearchAppPage,
+    HistoryPage,
+    DadosUsuarioPage,
+    AlterarSenhaPage,
+    EstatisticasPage,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +76,10 @@ import { SearchAppPage } from '../pages/search-app/search-app';
     ConfirmPage,
     SucessoPage,
     SearchAppPage,
+    HistoryPage,
+    DadosUsuarioPage,
+    AlterarSenhaPage,
+    EstatisticasPage,
   ],
   providers: [
     StatusBar,

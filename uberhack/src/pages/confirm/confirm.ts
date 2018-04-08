@@ -12,6 +12,10 @@ export class ConfirmPage {
     ) {}
 
     goConfirm() {
-        this._navController.push(SucessoPage);
+        this._navController.setRoot(SucessoPage);
+    }
+
+    back() {
+        this._navController.pop();
     }
 }

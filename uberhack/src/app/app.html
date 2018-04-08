@@ -1,43 +1,43 @@
 <ion-menu [content]="content">
     <ion-content>
         <div class="menu-header">
-            <div class="header-avatar" style="background-image: url('assets/imgs/avatar.png')">
-
-            </div>
+            <div class="header-avatar" style="background-image: url('assets/imgs/avatar.png')"></div>
             <div class="header-info">
                 <div class="header-menu-nome">
-                    Lucas França
+                    José da Silva
                 </div>
                 <div>
                     111.111.111-11
                 </div>
             </div>
         </div>
+        
         <ion-list>
             <button (click)="goHome()" ion-item menuClose>
                 Home
             </button>
-            <button ion-item menuClose>
+            <button (click)="goHistory()" ion-item menuClose>
                 Históricos
             </button>
-            <button ion-item menuClose>
+            <button (click)="goEstatisticas()" ion-item menuClose>
                 Estatísticas
+            </button>
+            <button (click)="goDadosPessoais()" ion-item menuClose>
+                Dados Pessoais
             </button>
             <button (click)="logout()" ion-item menuClose>
                 Sair
             </button>
         </ion-list>
 
-
-        <ion-list style="position: absolute; bottom: 0; left: 0;">
-            
-            <button style="font-size: .8em;" ion-item menuClose>
+        <ion-list no-lines style="position: absolute; bottom: 0; left: 0;">
+            <button style="font-size: 1em;" ion-item menuClose>
                 Como usar a ferramenta
             </button>
-            <button style="font-size: .8em;" ion-item menuClose>
+            <button style="font-size: 1em;" ion-item menuClose>
                 Configurações
             </button>
-            <button style="font-size: .8em;" ion-item menuClose>
+            <button style="font-size: 1em;" ion-item menuClose>
                 Informações legais
             </button>
         </ion-list>

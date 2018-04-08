@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button icon-only clear menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>
+            Dados Pessoais
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card style="width: 100%; margin-left: 0; margin-right: 0;">
+        <ion-card-header>
+            <div class="menu-header">
+                <div class="header-avatar" style="background-image: url('assets/imgs/avatar.png')"></div>
+            </div>
+        </ion-card-header>
+        <ion-card-content>
+            <b>Nome: </b> José da Silva <br>
+            <b>CPF: </b> 111.111.111-11 <br>
+            <b>Email: </b> jose.silva@gmail.com <br>
+        </ion-card-content>
+    </ion-card>
+
+    <div>
+        <button (click)="goAlterarSenha()" color="secondary" ion-button block>
+            Alterar Senha
+        </button>
+    </div>
+</ion-content>
