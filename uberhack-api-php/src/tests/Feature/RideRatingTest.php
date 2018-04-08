@@ -6,6 +6,7 @@ use App\Http\Resources\RideRating as RideRatingResource;
 use App\Models\Modal;
 use App\Models\ModalLine;
 use App\Models\ModalProblem;
+use App\Models\Ride;
 use App\Models\RideRating;
 use App\Models\User;
 use Carbon\Carbon;
@@ -49,5 +50,7 @@ class RideRatingTest extends TestCase
                 RideRatingResource::make($expectedModel)
             )
         );
+
+        $this->assertEquals($user->id, $expectedModel->ride->user_id);
     }
 }

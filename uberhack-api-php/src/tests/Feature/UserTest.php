@@ -3,15 +3,19 @@
 namespace Tests\Feature;
 
 use App\Http\Resources\User as UserResource;
+use App\Http\Resources\Ride as RideResource;
+use App\Models\Ride;
+use App\Models\RideRating;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Tests\TestCase;
+use Tests\Traits\ChecksApiResponse;
 
 class UserTest extends TestCase
 {
-    use DatabaseTransactions;
+    use DatabaseTransactions, ChecksApiResponse;
 
     protected $privateStructure = [
         'id',
@@ -108,5 +112,4 @@ class UserTest extends TestCase
         $response->assertStatus(200);
         $response->assertJson(["data" => UserResource::make($user)->toArray(new Request())], true);
     }
-
 }

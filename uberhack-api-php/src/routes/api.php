@@ -33,4 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     /** RideRatingController */
     Route::post('ride/rating', ['as' => 'ride_rating.store', 'uses' => 'RideRatingController@store']);
+
+    /** RideController */
+    Route::get('ride/my', ['as' => 'ride.list_my_rides', 'uses' => 'RideController@listMyRides']);
 });

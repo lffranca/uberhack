@@ -6,6 +6,7 @@ use App\Http\Requests\RideRating\StoreRequest;
 use App\Http\Resources\RideRating as RideRatingResource;
 use App\Models\Ride;
 use App\Models\RideRating;
+use Auth;
 use Carbon\Carbon;
 
 class RideRatingController extends BaseController
@@ -32,6 +33,7 @@ class RideRatingController extends BaseController
         ]));
 
         $ride->ride_at = new Carbon($request->ride_at);
+        $ride->user_id = Auth::id();
         $ride->save();
 
         $ride->ride_rating()->create($request->only([

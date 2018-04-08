@@ -26,7 +26,7 @@ class User extends BaseResource
                 'email',
                 'cpf'
             ]);
-            
+
             $this->includeRelation('rides', Ride::class);
         }
 

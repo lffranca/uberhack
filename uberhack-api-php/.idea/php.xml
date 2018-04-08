@@ -89,6 +89,7 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/class-loader" />
       <path value="$PROJECT_DIR$/src/vendor/barryvdh/reflection-docblock" />
       <path value="$PROJECT_DIR$/src/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/src/vendor/squizlabs/php_codesniffer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -3,12 +3,24 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\User\RegistrationRequest;
 use App\Http\Requests\User\UpdateRequest;
+use App\Models\Ride;
 use App\Models\User as UserModel;
 use App\Http\Resources\User as UserResource;
+use App\Models\User;
 use Auth;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
+    /**
+     * @var string
+     */
+    protected $model = User::class;
+
+    /**
+     * @var string
+     */
+    protected $resource = UserResource::class;
+
     /**
      * Register a new user
      *
