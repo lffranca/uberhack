@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers\Concerns;
 
-
 trait InteractsWithModel
 {
     /**
@@ -21,7 +20,8 @@ trait InteractsWithModel
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function model() {
+    protected function model()
+    {
         return $this->model::query();
     }
 }

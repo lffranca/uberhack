@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers\Concerns;
 
-
 use Illuminate\Database\Eloquent\Builder;
 use Request;
 

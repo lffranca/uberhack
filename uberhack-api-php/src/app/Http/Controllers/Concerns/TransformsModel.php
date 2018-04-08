@@ -20,7 +20,8 @@ trait TransformsModel
      * @param array $parameters
      * @return \Illuminate\Http\JsonResponse
      */
-    public function toSingleResponse(...$parameters) {
+    public function toSingleResponse(...$parameters)
+    {
         return $this->resource::make(...$parameters)->response();
     }
 
@@ -29,7 +30,8 @@ trait TransformsModel
      * @param $resource
      * @return \Illuminate\Http\JsonResponse
      */
-    public function toCollectionResponse($resource) {
+    public function toCollectionResponse($resource)
+    {
         return $this->resource::collection($resource)->response();
     }
 }

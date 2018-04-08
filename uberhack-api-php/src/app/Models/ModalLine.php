@@ -9,7 +9,8 @@ class ModalLine extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function modal() {
+    public function modal()
+    {
         return $this->belongsTo(Modal::class);
     }
 }

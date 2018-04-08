@@ -10,7 +10,8 @@ use App\Http\Controllers\Concerns\TransformsModel;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Routing\Controller;
 
-abstract class BaseController extends Controller {
+abstract class BaseController extends Controller
+{
     use AuthorizesRequests,
         InteractsWithModel,
         TransformsModel,

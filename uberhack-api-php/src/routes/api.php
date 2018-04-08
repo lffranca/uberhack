@@ -33,5 +33,4 @@ Route::group(['middleware' => 'auth'], function () {
 
     /** RideRatingController */
     Route::post('ride/rating', ['as' => 'ride_rating.store', 'uses' => 'RideRatingController@store']);
-
 });

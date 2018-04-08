@@ -1,10 +1,12 @@
 <?php
 namespace App\Http\Controllers;
+
 use App\Http\Requests\User\RegistrationRequest;
 use App\Http\Requests\User\UpdateRequest;
 use App\Models\User as UserModel;
 use App\Http\Resources\User as UserResource;
 use Auth;
+
 class UserController extends Controller
 {
     /**

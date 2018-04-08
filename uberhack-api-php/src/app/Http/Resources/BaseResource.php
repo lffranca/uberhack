@@ -88,7 +88,7 @@ abstract class BaseResource extends Resource
     {
         $this->data = array_merge(
             $this->data,
-            array_map(function($attribute) {
+            array_map(function ($attribute) {
                 /**
                  * @var $attribute \Carbon\Carbon
                  */

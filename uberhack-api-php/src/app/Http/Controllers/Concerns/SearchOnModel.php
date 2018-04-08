@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers\Concerns;
 
-
 trait SearchOnModel
 {
     public abstract function getSearchSortAliases();

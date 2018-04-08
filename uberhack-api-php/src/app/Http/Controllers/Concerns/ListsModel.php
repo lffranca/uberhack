@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers\Concerns;
 
-
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use \Request;
 
