@@ -16,7 +16,6 @@ class ModalLine extends BaseResource
             'id',
             'modal_id',
             'label',
-            'description'
         ]);
 
         $this->includeRelation('modal', Modal::class);
