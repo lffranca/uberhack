@@ -12,7 +12,7 @@ export class SearchBusPage {
     private modal_id: any;
 
     constructor(
-        private _viewController: ViewController,
+        public _viewController: ViewController,
         private modalLineProvider: ModalLineProvider,
         private _navParams: NavParams
     ) {
