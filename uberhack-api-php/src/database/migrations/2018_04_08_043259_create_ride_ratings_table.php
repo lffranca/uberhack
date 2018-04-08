@@ -23,6 +23,9 @@ class CreateRideRatingsTable extends Migration
              */
 
             $table->unsignedTinyInteger('overall_rating');
+            $table->unsignedInteger('modal_problem_id');
+            $table->foreign('modal_problem_id')->references('id')->on('modal_problems');
+            $table->text('observations')->nullable();
 
             $table->timestamps();
         });

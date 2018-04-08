@@ -2,9 +2,7 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class User extends JsonResource
+class User extends BaseResource
 {
     /**
      * Transform the resource into an array.
@@ -14,8 +12,18 @@ class User extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-            'id' => $this->resource->id,
-        ];
+        $this->appendRawAttributes([
+            'id',
+            'name',
+        ]);
+
+        if (\Auth::id() === $this->resource->id) {
+            $this->appendRawAttributes([
+                'email',
+                'cpf'
+            ]);
+        }
+
+        return $this->data;
     }
 }

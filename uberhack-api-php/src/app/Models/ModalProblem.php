@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ModalLine extends Model
+class ModalProblem extends Model
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

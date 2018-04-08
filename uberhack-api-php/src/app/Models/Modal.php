@@ -13,4 +13,11 @@ class Modal extends Model
     {
         return $this->hasMany(ModalLine::class);
     }
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function modal_problems()
+    {
+        return $this->hasMany(ModalProblem::class);
+    }
 }

@@ -6,6 +6,7 @@ use App\Http\Resources\Modal as ModalResource;
 use App\Models\Modal;
 use App\Http\Resources\User as UserResource;
 use App\Models\ModalLine;
+use App\Models\ModalProblem;
 use App\Models\ModalTicketCategory;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -58,10 +59,12 @@ class ModalTest extends TestCase
 
         foreach($modals as $modal) {
             factory(ModalLine::class, 3)->create(['modal_id' => $modal->id]);
+            factory(ModalProblem::class, 3)->create(['modal_id' => $modal->id]);
         }
 
         $includes = [
             'modal_lines',
+            'modal_problems',
         ];
 
         $response = $this->getJson('/api/modal?include=' . implode(',', $includes));

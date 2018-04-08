@@ -19,6 +19,9 @@ class UserController extends Controller
         $user = new UserModel($request->all());
         $user->password = bcrypt($request->get('password'));
         $user->save();
+
+        Auth::login($user);
+
         return UserResource::make($user)->response();
     }
     /**

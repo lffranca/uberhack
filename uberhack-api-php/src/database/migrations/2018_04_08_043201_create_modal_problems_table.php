@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRidesTable extends Migration
+class CreateModalProblemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateRidesTable extends Migration
      */
     public function up()
     {
-        Schema::create('rides', function (Blueprint $table) {
+        Schema::create('modal_problems', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('modal_line_id');
-            $table->foreign('modal_line_id')->references('id')->on('modal_lines');
-
-            $table->timestamp('ride_at');
-
+            $table->unsignedInteger('modal_id');
+            $table->foreign('modal_id')->references('id')->on('modals');
+            $table->string('label');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateRidesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rides');
+        Schema::dropIfExists('modal_problems');
     }
 }
