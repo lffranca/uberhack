@@ -23,6 +23,7 @@ class Ride extends BaseResource
 
         $this->includeRelation('user', User::class);
         $this->includeRelation('modal_line', ModalLine::class);
+        $this->includeRelation('ride_rating', RideRating::class);
 
         return $this->data;
     }
