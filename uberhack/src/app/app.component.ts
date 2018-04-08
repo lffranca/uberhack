@@ -6,9 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { STORAGE_TOKEN_AUTH } from '../constants/storage-constant';
 import { HomePage } from '../pages/home/home';
-import { HistoryPage } from '../pages/history/history';
-import { DadosUsuarioPage } from '../pages/dados-usuario/dados-usuario';
-import { EstatisticasPage } from '../pages/estatisticas/estatisticas';
+import {User} from "../models/user";
+import {UserProvider} from "../providers/user/user";
 
 @Component({
   templateUrl: 'app.html'
@@ -18,25 +17,28 @@ export class MyApp {
 
   public rootPage: any = this._verifyAuth();
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  public user?: User;
+
+  constructor(
+      platform: Platform,
+      statusBar: StatusBar,
+      splashScreen: SplashScreen,
+      private userProvider: UserProvider,
+  ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });
+
+    this.userProvider.getCurrentUser().subscribe((user) => {
+        this.user = user;
+    })
   }
 
-  goEstatisticas() {
-    this._navController.setRoot(EstatisticasPage);
-  }
+  ionViewWillEnter() {
 
-  goDadosPessoais() {
-    this._navController.setRoot(DadosUsuarioPage);
-  }
-
-  goHistory() {
-    this._navController.setRoot(HistoryPage);
   }
 
   goHome() {
