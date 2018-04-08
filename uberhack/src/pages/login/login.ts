@@ -1,10 +1,14 @@
 import {Component} from '@angular/core';
 import { Person } from '../../models/person';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import {AlertController, NavController} from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 import { STORAGE_TOKEN_AUTH } from '../../constants/storage-constant';
+import {LoadingProvider} from "../../providers/loading/loading";
+import {AuthProvider} from "../../providers/auth/auth";
+import {User} from "../../models/user";
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
     selector: 'page-login',
@@ -13,10 +17,14 @@ import { STORAGE_TOKEN_AUTH } from '../../constants/storage-constant';
 export class LoginPage {
     public person: Person;
     public personForm: FormGroup;
+    private userSubscription: Subscription;
 
     constructor(
         private _navController: NavController,
-        private _formBuilder: FormBuilder
+        private _formBuilder: FormBuilder,
+        private loading: LoadingProvider,
+        private authProvider: AuthProvider,
+        private alertController: AlertController,
     ) {
         this.personForm = this._formBuilder.group({
             email: ['', [Validators.email, Validators.required]],
@@ -24,19 +32,72 @@ export class LoginPage {
         });
     }
 
+    ionViewWillEnter() {
+        this.userSubscription = this.authProvider.observeUser().subscribe((user: User) => {
+            if (user) {
+                if (this._navController.canGoBack()) {
+                    this._navController.pop();
+                } else {
+                    this._navController.setRoot(HomePage);
+                }
+            }
+        })
+    }
+
     goLogin() {
-        localStorage.setItem(STORAGE_TOKEN_AUTH, 'kljhlksjdhfljsdhflkjsdfh');
+        // localStorage.setItem(STORAGE_TOKEN_AUTH, 'kljhlksjdhfljsdhflkjsdfh');
+        //
+        // this._navController.setRoot(HomePage);
+        // // if (this.personForm.valid && this.personForm.touched) {
+        // //     console.log('[Login Page] go Login', this.personForm.value);
+        //
+        // //     localStorage.setItem(STORAGE_TOKEN_AUTH, 'kljhlksjdhfljsdhflkjsdfh');
+        //
+        // //     this._navController.setRoot(HomePage);
+        // // } else {
+        // //     console.log('[Login Page] go Login Error', this.personForm.value);
+        // // }
 
-        this._navController.setRoot(HomePage);
-        // if (this.personForm.valid && this.personForm.touched) {
-        //     console.log('[Login Page] go Login', this.personForm.value);
+      this.loading.load('Entrando...');
+      this.authProvider.login(
+        this.personForm.value.email,
+        this.personForm.value.password,
+      ).subscribe(
+        (success) => {
+          this.loading.dismiss();
+          if (success) {
+            this._navController.setRoot(HomePage)
+          } else {
+            this.personForm.patchValue({
+              password: ''
+            });
 
-        //     localStorage.setItem(STORAGE_TOKEN_AUTH, 'kljhlksjdhfljsdhflkjsdfh');
+            this.showWrongCredentialsAlert();
+          }
+        },
+        (error) =>
+        {
+          this.loading.dismiss();
+          this.showLoginFailedAlert(error);
+        }
+      );
 
-        //     this._navController.setRoot(HomePage);
-        // } else {
-        //     console.log('[Login Page] go Login Error', this.personForm.value);
-        // }
+    }
+
+    private showLoginFailedAlert(error) {
+        this.alertController.create({
+            title: 'Ops!',
+            subTitle: 'Ocorreu um erro em nossos servidores, tente novamente!',
+            buttons: ['OK']
+        }).present();
+    }
+
+    private showWrongCredentialsAlert() {
+        this.alertController.create({
+            title: 'Ops!',
+            subTitle: 'Email e senha não conferem!',
+            buttons: ['Tentar novamente']
+        }).present();
     }
 
     goRegister() {

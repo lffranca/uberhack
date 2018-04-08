@@ -13,6 +13,15 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(ModalSeeder::class);
 
+        \Laravel\Passport\Client::create([
+            'name' => 'Sandbox Password Grant Client',
+            'revoked' => false,
+            'password_client' => true,
+            'personal_access_client' => false,
+            'redirect' => 'http://localhost',
+            'secret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        ]);
+
          \App\Models\User::create([
              'name' => 'João da Silva',
              'email' => 'joao@gmail.com',

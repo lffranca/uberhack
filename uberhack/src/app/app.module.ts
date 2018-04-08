@@ -17,6 +17,15 @@ import { SearchBusPage } from '../pages/search-bus/search-bus';
 import { Ionic2RatingModule } from "ionic2-rating";
 import { ConfirmPage } from '../pages/confirm/confirm';
 import { SucessoPage } from '../pages/sucesso/sucesso';
+import {APP_CONFIG, APP_CONFIG_VALUE} from "./app.config";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
+import {AuthInterceptor} from "../providers/auth/auth.interceptor";
+import {AuthProvider} from "../providers/auth/auth";
+import {ApiProvider} from "../providers/api/api";
+import {UserProvider} from "../providers/user/user";
+import {LoadingProvider} from "../providers/loading/loading";
+import {IonicStorageModule} from "@ionic/storage";
 
 @NgModule({
   declarations: [
@@ -41,7 +50,9 @@ import { SucessoPage } from '../pages/sucesso/sucesso';
     NgReduxModule,
     FormsModule,
     ReactiveFormsModule,
-    Ionic2RatingModule
+    Ionic2RatingModule,
+    HttpClientModule,
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,7 +70,16 @@ import { SucessoPage } from '../pages/sucesso/sucesso';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CounterActions
+    {provide: APP_CONFIG, useValue: APP_CONFIG_VALUE},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    CounterActions,
+
+    // API Providers
+
+    AuthProvider,
+    ApiProvider,
+    UserProvider,
+    LoadingProvider,
   ]
 })
 export class AppModule {}
