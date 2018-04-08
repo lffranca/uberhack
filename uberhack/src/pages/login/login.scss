@@ -1,0 +1,131 @@
+page-login {
+
+    .input-has-focus .label-md[floating],
+    .input-has-focus .label-md[stacked],
+    .item-input-has-focus .label-md[floating],
+    .item-input-has-focus .label-md[stacked],
+    
+    .input-has-focus .label-ios[floating],
+    .input-has-focus .label-ios[stacked],
+    .item-input-has-focus .label-ios[floating],
+    .item-input-has-focus .label-ios[stacked] {
+        color: map-get($colors, secondary);
+    }
+
+    .item-input .label-md,
+    .item-select .label-md,
+    .item-datetime .label-md {
+        color: map-get($colors, secondary);
+    }
+
+    .item-md.item-input.input-has-focus .item-inner,
+    .item-md.item-input.item-input-has-focus .item-inner,
+    
+    .item-ios.item-input.input-has-focus .item-inner,
+    .item-ios.item-input.item-input-has-focus .item-inner
+    
+    .list-md .item-input.input-has-focus:last-child,
+    .list-md .item-input.item-input-has-focus:last-child,
+    
+    .list-ios .item-input.input-has-focus:last-child,
+    .list-ios .item-input.item-input-has-focus:last-child{
+        border-bottom-color: map-get($colors, secondary);
+        -webkit-box-shadow: inset 0 -1px 0 0 map-get($colors, secondary);
+        box-shadow: inset 0 -1px 0 0 map-get($colors, secondary);
+    }
+
+    ion-content {
+        &.content-md, &.content-ios {
+            color: #fff;
+            background-image: url('../assets/imgs/bg_login.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .scroll-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-bottom: 0!important;
+        }
+
+        .content-all {
+            background-color: rgba(map-get($colors, primary), .4);
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+
+            div.header-logo {
+                height: auto;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                div.logo-content {
+                    div.logo {
+                        height: 80px;
+                        width: 150px;
+                        border: 1px solid black;
+                        border-radius: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        align-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+    
+            form {
+                width: 80%;
+
+                ion-item {
+                    &.item-md, &.item-ios {
+                        background-color: transparent;
+                        padding-left: 0;
+                    }
+
+                    input {
+                        color: white;
+                    }
+                }
+
+                .button-register {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    button {
+                        text-transform: initial;
+                        text-align: left;
+                        margin-left: 10px;
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            @media screen and (max-height: 404px) {
+                div.header-logo {
+                    display: none!important;
+                }
+            }
+        }
+    }
+}

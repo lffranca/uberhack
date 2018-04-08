@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            {{ title }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="content-rating">
+        <rating [(ngModel)]="rate" 
+            readOnly="false"
+            max="5"
+            emptyStarIconName="star-outline"
+            halfStarIconName="star-half"
+            starIconName="star"
+            nullable="false"
+            (ngModelChange)="onRatingChange($event)">
+        </rating>
+    </div>
+
+    <button *ngIf="item.id === 1" (click)="searchLinhas()" ion-button block>
+        Adicionar linha de ônibus
+    </button>
+    <!-- <div *ngIf="item.id === 1 && bus">
+        <span><b>Linha Selecionada: </b> {{ bus.number }} - {{ bus.description }}</span>
+    </div> -->
+
+    <ion-card style="margin-left: 0; margin-right: 0; width: 100%;" *ngIf="item.id === 1 && bus">
+        <ion-card-header>
+            <b>COD: </b> {{ bus.number }}
+        </ion-card-header>
+        <ion-card-content>
+            {{ bus.description }}
+        </ion-card-content>
+    </ion-card>
+
+    <div style="margin-top: 30px;">
+        <p>
+            Informe data e horario da ocorrência:
+        </p>
+        <ion-item>
+            <ion-label>Data</ion-label>
+            <ion-datetime cancelText="Cancelar" doneText="Ok" displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Hora</ion-label>
+            <ion-datetime cancelText="Cancelar" doneText="Ok" displayFormat="HH:mm" [(ngModel)]="date"></ion-datetime>
+        </ion-item>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <p>
+            Tipo de Problema:
+        </p>
+        <ion-item>
+            <ion-label>Atraso</ion-label>
+            <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Segurança</ion-label>
+            <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Atendimento</ion-label>
+            <ion-checkbox></ion-checkbox>
+        </ion-item>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <p>
+            Escreva suas observações:
+        </p>
+        <ion-item>
+            <ion-textarea placeholder="Digite aqui..." [(ngModel)]="observacoes"></ion-textarea>
+        </ion-item>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <button (click)="goConfirm()" color="secondary" ion-button block>
+            Continuar
+        </button>
+    </div>
+</ion-content>

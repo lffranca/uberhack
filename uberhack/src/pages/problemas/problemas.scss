@@ -1,0 +1,38 @@
+page-problemas {
+    // ion-content {
+    //     &.content-md,
+    //     &.content-ios {
+    //         color: #fff;
+    //         background-color: map-get($colors, primary);
+    //     }
+    // }
+
+    .item-md {
+        padding-left: 0;
+        color: #000;
+        background-color: #fff;
+    }
+
+    ul.rating {
+        padding: 0px;
+
+        &.rating li {
+            padding: 5px 10px !important;
+            background: none;
+            color: #ffb400;
+
+            ion-icon {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .content-rating {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+}

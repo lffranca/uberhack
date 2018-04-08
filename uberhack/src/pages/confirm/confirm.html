@@ -1,0 +1,40 @@
+<ion-content padding>
+    <div style="position: fixed; top: 10px; left: 10px;">
+        <button ion-button icon-only clear>
+            <ion-icon color="light" name="arrow-back"></ion-icon>
+        </button>
+    </div>
+
+    <ion-card style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 70px;">
+        <ion-card-header>
+            <img style="width: 40%;" src="assets/imgs/logo.svg" alt="">
+            <div style="text-align: center; margin-top: 20px;">
+                Oficio de reclamação <br> de serviço de transporte
+            </div>
+        </ion-card-header>
+        <ion-card-content style="color: black;">
+            Cidade: Fortaleza - CE<br>
+            Hora e Data: 12:30 09/03/2018<br>
+            Reclamante: José da Silva<br>
+            CPF: 123.123.123-12<br>
+            <br>
+            Modal de Transporte: Ônibus<br>
+            Hora e dia da ocorrência: 12:30 09/03/2018<br>
+            Tipo de Problema: Atraso<br>
+            O veículo passou 30min depois do horário que o aplicativo da prefeitura informou.
+        </ion-card-content>
+    </ion-card>
+
+    <!-- <div style="margin: 16px;">
+        <ion-item>
+            <ion-label>Li e aceito os termos da Kritik para envio de reclamações para empresas  e poder público.</ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+        </ion-item>
+    </div> -->
+
+    <div style="margin-top: 30px; ">
+        <button (click)="goConfirm()" color="secondary" ion-button block>
+            Confirmar
+        </button>
+    </div>
+</ion-content>

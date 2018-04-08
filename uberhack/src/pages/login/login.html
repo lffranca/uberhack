@@ -1,0 +1,36 @@
+<ion-content>
+    <div class="content-all">
+        <div class="header-logo">
+            <img style="width: 100%;" src="assets/imgs/logo.svg" alt="">
+        </div>
+        <form [formGroup]="personForm">
+            <ion-list>
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input type="email" formControlName="email"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Senha</ion-label>
+                    <ion-input type="password" formControlName="password"></ion-input>
+                </ion-item>
+            </ion-list>
+
+            <button (click)="goLogin()" color="secondary" ion-button block>
+                Entrar
+            </button>
+
+            <div class="button-register">
+                Não possui cadastro? 
+                <button color="secondary" (click)="goRegister()" ion-button clear>
+                    Registre-se
+                </button>
+            </div>
+
+            <div class="button-register">
+                <button color="secondary" (click)="returnToLogin()" ion-button clear>
+                    Recuperar a senha
+                </button>
+            </div>
+        </form>
+    </div>
+</ion-content>

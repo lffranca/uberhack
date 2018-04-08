@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-searchbar (ionInput)="getItems($event)" placeholder="Pesquisar Linha"></ion-searchbar>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="selectItem(item)">
+            <h2>{{ item.number }} - {{ item.description }}</h2>
+        </ion-item>
+    </ion-list>
+</ion-content>

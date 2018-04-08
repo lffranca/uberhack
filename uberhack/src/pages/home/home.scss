@@ -1,0 +1,96 @@
+page-home {
+    ion-content {
+        &.content-md,
+        &.content-ios {
+            color: #fff;
+            background-color: map-get($colors, primary);
+        }
+    }
+
+    .scroll-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: stretch;
+    }
+
+    .header-home {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .header-content {
+            color: map-get($colors, light);
+            // font-weight: 900;
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+
+    .all-items {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        .options-item {
+            height: 60px;
+            width: 60%;
+            background-color: map-get($colors, light);
+            margin-bottom: 10px;
+            color: #000;
+            font-size: 1.5em;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+
+            .text-content {
+                width: 100%;
+                text-align: center;
+            }
+
+            .icon-content {
+                width: 60px;
+
+                border-left: 1px solid black;
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .logo-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        margin-top: 30px;
+
+        img {
+            width: 60%;
+            height: auto;
+        }
+    }
+}

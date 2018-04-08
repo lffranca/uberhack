@@ -1,0 +1,41 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+  <div style="position: fixed; top: 10px; left: 10px;">
+      <button ion-button icon-only clear menuToggle>
+        <ion-icon color="light" name="menu"></ion-icon>
+      </button>
+  </div>
+
+  <div style="height: 40px;"></div>
+  
+  <div class="header-home">
+    <div class="header-content">
+      O QUE VOCÊ QUER <br>
+      AVALIAR?
+    </div>
+  </div>
+  <div class="all-items">
+    <div *ngFor="let item of items" (click)="goItem(item)" class="options-item">
+      <div class="text-content">{{ item.description }}</div>
+      
+      <div class="icon-content">
+        <ion-icon [name]="item.icon"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <div class="logo-content">
+    <img src="assets/imgs/logo.svg" alt="">
+  </div>
+</ion-content>

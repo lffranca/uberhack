@@ -1,0 +1,42 @@
+<ion-menu [content]="content">
+    <ion-content>
+        <div class="menu-header">
+            <div class="header-avatar" style="background-image: url('assets/imgs/avatar.png')">
+
+            </div>
+            <div class="header-info">
+                <div class="header-menu-nome">
+                    Lucas França
+                </div>
+                <div>
+                    lucasfranca.dev@gmail.com
+                </div>
+            </div>
+        </div>
+        <ion-list>
+            <button (click)="goHome()" ion-item menuClose>
+                Home
+            </button>
+            <button ion-item menuClose>
+                Históricos
+            </button>
+            <button ion-item menuClose>
+                Estatísticas
+            </button>
+            <button ion-item menuClose>
+                Configurações
+            </button>
+            <button ion-item menuClose>
+                Termos de Uso
+            </button>
+            <button ion-item menuClose>
+                Ajuda
+            </button>
+            <button (click)="logout()" ion-item menuClose>
+                Sair
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

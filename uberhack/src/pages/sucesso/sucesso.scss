@@ -1,0 +1,31 @@
+page-sucesso {
+    ion-content {
+        &.content-md,
+        &.content-ios {
+            color: #fff;
+            background-color: map-get($colors, primary);
+        }
+    }
+
+    ion-item {
+        &.item-md, &.item-ios {
+            background-color: transparent;
+            padding-left: 0;
+        }
+
+        input {
+            color: white;
+        }
+    }
+
+    ion-card-header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+
+    }
+}
