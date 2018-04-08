@@ -26,6 +26,7 @@ import {ApiProvider} from "../providers/api/api";
 import {UserProvider} from "../providers/user/user";
 import {LoadingProvider} from "../providers/loading/loading";
 import {IonicStorageModule} from "@ionic/storage";
+import { SearchAppPage } from '../pages/search-app/search-app';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {IonicStorageModule} from "@ionic/storage";
     SearchBusPage,
     ConfirmPage,
     SucessoPage,
+    SearchAppPage,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,7 @@ import {IonicStorageModule} from "@ionic/storage";
     SearchBusPage,
     ConfirmPage,
     SucessoPage,
+    SearchAppPage,
   ],
   providers: [
     StatusBar,
