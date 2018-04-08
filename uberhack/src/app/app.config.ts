@@ -10,7 +10,7 @@ export interface AppConfig {
 
 export const APP_CONFIG_VALUE: AppConfig = {
     API: {
-        ENDPOINT: 'http://docker.uberhack:8889/api',
+        ENDPOINT: 'http://kritk.iget.com.br/api',
         CLIENT_ID: 3,
         CLIENT_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     }

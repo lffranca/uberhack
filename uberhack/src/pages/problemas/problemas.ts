@@ -63,7 +63,17 @@ export class ProblemasPage {
     }
 
     goConfirm() {
-        this._navController.push(ConfirmPage);
+        this._navController.push(ConfirmPage, {data: {
+            modal: this.modal,
+            rate: this.rate,
+            bus: this.bus,
+            appMotorista: this.appMotorista,
+            appPlacaVeiculo: this.appPlacaVeiculo,
+            taxiNumero: this.taxiNumero,
+            ride_at: this.ride_at,
+            observations: this.observations,
+            modal_problem_id: this.modal_problem_id,
+        }});
     }
 
     back() {

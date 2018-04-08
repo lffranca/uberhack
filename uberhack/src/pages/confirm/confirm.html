@@ -14,14 +14,13 @@
         </ion-card-header>
         <ion-card-content style="color: black;">
             Cidade: Fortaleza - CE<br>
-            Hora e Data: 12:30 09/03/2018<br>
-            Reclamante: José da Silva<br>
-            CPF: 123.123.123-12<br>
+            Hora e Data: {{ data.ride_at | date: 'hh:mm yy/d/M' }}<br>
+            Reclamante: {{ user?.name }}<br>
+            CPF: {{ user?.cpf }}<br>
             <br>
-            Modal de Transporte: Ônibus<br>
-            Hora e dia da ocorrência: 12:30 09/03/2018<br>
-            Tipo de Problema: Atraso<br>
-            O veículo passou 30min depois do horário que o aplicativo da prefeitura informou.
+            Modal de Transporte: {{ data.modal.label }}<br>
+            Hora e dia da ocorrência: {{ data.ride_at | date: 'hh:mm yy/d/M' }}<br><br>
+            {{ data.observations }}
         </ion-card-content>
     </ion-card>
 
